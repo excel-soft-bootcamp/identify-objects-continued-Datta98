@@ -3,7 +3,7 @@
 <br>
 2)Server Side State Management.
 
-## 1) Client Side State Management
+-1) Client Side State Management
 
                 It is a way in which the information which is being added by the user or the information about the interaction happened  between the user and the server is stored on the client's machine or in the page itself.
                 
@@ -26,6 +26,6 @@ When the user sends a request to the server, the server creates a cookie and att
  <br>
  <br>
  <br>
-## 1) Server Side State Management
+- 2) Server Side State Management
 <br>
       It is another way which ASP.NET provides to store the user's specific information or the state of the application on the server machine.<br> It completely makes use of server resources (the server's memory) to store information.
