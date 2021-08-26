@@ -7,9 +7,9 @@
 
                 It is a way in which the information which is being added by the user or the information about the interaction happened between the user and the server is stored on the client's machine or in the page itself.
                 
-       <br>
+     
        This management technique basically makes use of the following:
-       <br>
+      
 ###### 1)View State :  <br>
 View State can be used to maintain the State at a page level. The term "Page Level" means that the information is being stored for a specific page and until that specific page is<br> active (i.e. the page which is being currently viewed by the user). Once the user is re-directed or goes to some other page, the information stored in the View State gets<br> lost.
 ###### 2)Hidden Fields : <br>
