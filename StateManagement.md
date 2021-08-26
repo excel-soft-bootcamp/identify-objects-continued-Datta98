@@ -21,7 +21,7 @@ ASP.NET provides a server control called "Hidden Field" which can be used to sto
 
 ASP.Net provides another way of state management, which is by using Cookies. Cookies are one of the best ways of storing information.<br> It is nothing but a text file which is stored on the client's machine.
  <br>
-         When the user sends a request to the server, the server creates a cookie and attaches a header and sends it back to the user along with the response.<br> The browser accepts the cookie and stores it at a specific location on the client's machine.
+         When the user sends a request to the server, the server creates a cookie and attaches a header and sends it back to the user along with the response.The browser accepts the cookie and stores it at a specific location on the client's machine.
  
  <br>
  <br>
