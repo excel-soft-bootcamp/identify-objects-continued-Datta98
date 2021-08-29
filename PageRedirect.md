@@ -5,6 +5,8 @@ There are Some methods for redirect one page to another<br>
 2)Server.Transfer
 <br>
 3)Server.Execute
+<br>
+4)Cross Page Postback
 ### 1) Response.Redirect
 It redirects a client to a new URL. Specifies the new URL and whether execution of the current page should terminate.
 
@@ -47,3 +49,34 @@ protected void Button1_Click(object sender, EventArgs e)
 ```
 - When using the server.Exceute method for navigation it helps to retain the execution control from the source web form.
 - In the above syntax default.aspx is a source web form from where we have navigated to Home.aspx using server.exceute. When the control finds the code block of navigation it moved the control and starts processing the Home.aspx but does not leave the control from default.aspx and after completion of the target web form control again move to the source web form and execute the further code processing on default.aspx page.
+
+### 4) Cross Page Postback
+- The Cross Page posting technique allows a web form to post on another web form on button click. 
+- It means you are posting form data from one page to another page.
+- The PostbackUrl property of the button is set to the page where you want to do cross-page posting.
+```C#
+// Syntax
+// Default.aspx
+<form id="form1" runat="server">
+        <div>
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+          
+            <asp:Button ID="Button2" runat="server" Text="Button" PostBackUrl="~/Home.aspx" />
+        </div>
+</form>
+```
+
+```C#
+
+// Home.aspx.cs
+     protected void Page_Load(object sender, EventArgs e)
+     {
+       if(PreviousPage != null && PreviousPage.IsCrossPagePostBack)
+          {
+              TextBox textBox = (TextBox)PreviousPage.FindControl("TextBox1");
+              Label1.Text = "Welcome" + textBox.Text;
+          }
+     }
+```
+
+
