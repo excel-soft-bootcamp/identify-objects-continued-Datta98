@@ -80,4 +80,12 @@ There are six types of validation controls in ASP.NET <br>
 ### 6. ValidationSummary
 - The ValidationSummary control is reporting control, which is used by the other validation controls on a page. 
  
-- The validation summary control will collect all the error messages of all the non-valid controls and put them in a tidy list.
+- The validation summary control will collect all the error messages of all the non-valid controls and display them on the page.
+
+
+# User Controls in ASP.NET
+- An ASP.NET Web user control is similar to a complete ASP.NET Web page (.aspx file), with both a user interface page and code.
+- The file name extension for the user control is .ascx.
+- You create the user control in much the same way you create an ASP.NET page and then add the child controls that you need.
+- User controls cannot run as stand-alone files. Instead, you must add them to ASP.NET pages.
+- A UserControl also provides for reusability. In other words, we can create and edit in one thing and get results everywhere, wherever you use the item.
