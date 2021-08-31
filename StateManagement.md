@@ -87,15 +87,9 @@ A Query String is a string which is appended to the end of the Page URL. It is v
  public partial class Home : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-            HttpCookie cookie = Request.Cookies["UserData"];
-            if (cookie != null)
-            {             
+        {          
                 Label_FirstName.Text = Request.QueryString["FirstName"];
                 Label_LastName.Text = Request.QueryString["LastName"];
-
-            }
 
         }
     }
