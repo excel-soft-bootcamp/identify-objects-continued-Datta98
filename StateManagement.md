@@ -90,7 +90,6 @@ A Query String is a string which is appended to the end of the Page URL. It is v
         {          
                 Label_FirstName.Text = Request.QueryString["FirstName"];
                 Label_LastName.Text = Request.QueryString["LastName"];
-
         }
     }
 ```   
@@ -152,10 +151,81 @@ It is another way which ASP.NET provides to store the user's specific informatio
    * State Server
    * SQL Server
    
+```C#
+//Default.aspx.cs
+  public partial class Default : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Submit_Click(object sender, EventArgs e)
+        {          
+           Session["First_Name"] = FirstName.Text;
+           Session["Last_Name"] = LastName.Text;
+           Response.Redirect("Home.aspx");    
+        }
+    }
+```        
+```C#
+//Home.aspx.cs
+
+ public partial class Home : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+           if (Session["First_Name"] != null)
+            {
+                Label_FirstName.Text = Session["First_Name"].ToString();
+            }
+            if (Session["Last_Name"] != null)
+            {
+                Label_LastName.Text = Session["Last_Name"].ToString();
+            }
+        }
+    }
+```   
+   
+   
 - Application State :If the information that we want to be accessed or stored globally throughout the application, even if multiple users access the site or application at the same time, then we can use an Application Object for such purposes.
 It stores information as a Dictionary Collection in key - value pairs. This value is accessible across the pages of the application / website.
 There are 3 events of the Application which are as follows
--Application_Start
--Application_Error
--Application_End
 
+```C#
+//Default.aspx.cs
+  public partial class Default : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Submit_Click(object sender, EventArgs e)
+        {          
+            Application["First_Name"] = FirstName.Text;
+            Application["Last_Name"] = LastName.Text;
+            Response.Redirect("Home.aspx");
+        }
+    }
+```        
+```C#
+//Home.aspx.cs
+
+ public partial class Home : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Application["First_Name"] != null)
+            {
+                Label_FirstName.Text = Application["First_Name"].ToString();
+            }
+
+            if (Application["Last_Name"] != null)
+            {
+                Label_LastName.Text = Application["Last_Name"].ToString();
+            }
+        }
+    }
+```   
