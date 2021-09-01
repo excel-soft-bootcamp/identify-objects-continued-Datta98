@@ -82,6 +82,10 @@ There are six types of validation controls in ASP.NET <br>
  
 - The validation summary control will collect all the error messages of all the non-valid controls and display them on the page.
 
+# Validation Group in ASP.NET
+- Validation groups allow you to organize validation controls on a page as a set. 
+- Each validation group can perform validation independently from other validation groups on the page.
+- You create a validation group by setting the ValidationGroup property to the same name (a string) for all the controls you want to group.
 
 # User Controls in ASP.NET
 - An ASP.NET Web user control is similar to a complete ASP.NET Web page (.aspx file), with both a user interface page and code.
