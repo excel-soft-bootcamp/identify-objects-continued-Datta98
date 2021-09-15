@@ -11,3 +11,4 @@
 - Html.ListBoxFor()
 - Html.LabelFor()
 - Html.DisplayFor()
+- Html.EditorFor()
