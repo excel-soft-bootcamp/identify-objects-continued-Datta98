@@ -4,7 +4,7 @@
 - This security in the software term is called the same-origin policy and does not allow a suspensive site attack for reading sensitive data from another site.
 - When we are using multipe domain applications which is reqired to call from one domain to other domainin . Then in this case if the browser supports CORS, it sets the headers automatically for cross-origin requests.
 - If all the things will work as expected with the server, then the server adds "Access-Control-Allow-Origin" header in the response.
-- To setup the CORS we need to go and install Nuget package: Microsoft.AspNetCore.Cors.
+- To setup the CORS we need to  install Nuget package: Microsoft.AspNetCore.Cors.
 
 ### Implementation
  There are  three ways to enable CORS:
